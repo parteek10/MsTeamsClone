@@ -1,0 +1,66 @@
+html,body{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.active{
+    color:skyblue!important;
+}
+
+.container{
+    margin: 0 2vw;
+}
+
+.text-gray{
+    color: var(--text-grey);
+}
+
+*{
+    list-style: none;
+    /* text-transform: capitalize; */
+}
+
+input{
+    text-transform: none;
+}
+
+h1{   font-family: var(--Lexend);
+    font-size: 2rem;
+}
+
+h3{
+    font-family: var(--Abel);
+    font-size: 1.5rem;
+}
+
+h2{
+    font-family: var(--Lexend);
+}
+
+.btn{
+    border: none;
+    border-radius: 2rem;
+    padding: 1rem 3rem;
+    font-family: var(--Livvic);
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: skyblue;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+

@@ -1,0 +1,175 @@
+body {
+  background-size: cover !important;
+}
+
+.cont {
+  width: 50%;
+  overflow: hidden;
+  margin: 10vw auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  padding: 2vw;
+  box-shadow: 20px 20px 5px skyblue;
+  border-radius: 10px;
+  border: 4px solid skyblue;
+}
+
+.main {
+  padding: 20px;
+}
+
+.main hr {
+  margin: 20px;
+}
+
+.form label {
+  font-size: 2rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.form input {
+  margin: 10px;
+}
+
+.form input[type="text"],
+input[type="password"],
+input[type="number"] {
+  width: 70%;
+  height: 2rem;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.form button {
+  padding: 10px;
+  margin: 10px;
+}
+
+label {
+  color: skyblue;
+  display: block;
+}
+
+.marker {
+  margin: 90px auto;
+  width: 20vw;
+}
+
+select {
+  margin: 10px 20px;
+  width: 50%;
+  height: 30px;
+}
+
+.cont table {
+  font-family: var(--Abel);
+  font-size: 1rem;
+  width: 100%;
+  border-collapse: collapse;
+  
+}
+
+.cont td,
+.cont th {
+  padding: 5px;
+  align-items: center;
+  font-size: 1.3rem;
+  text-align: center;
+  justify-content: center;
+}
+
+.cont tr:nth-child(even) {
+  background-color: whitesmoke;
+}
+
+.cont tr:hover {
+  background-color: lightblue;
+}
+
+.cont th {
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: skyblue;
+  color: white;
+}
+
+@media screen and (max-width: 840px) {
+
+  h1{
+    font-size: 2rem;
+  }
+
+  input{
+    font-size: 1.5rem;
+  }
+  .cont {
+    grid-template-columns: 1fr !important;
+    width: 85%;
+    margin: 30vw auto;
+    box-shadow: 10px 10px 5px skyblue;
+  }
+  .box {
+    height: 25vw !important;
+    width: 25vw !important;
+    margin: 0 auto;
+  }
+  .btn {
+    padding: 5px;
+  }
+  .cont td,
+  .cont th , .cont thead {
+    
+    padding: px;
+    align-items: center;
+    font-size:1rem;
+    text-align: center;
+    justify-content: center;
+  }
+  .cont input{
+    height: 1rem;
+  }
+
+  .cont input, .cont label{
+    font-size: 1rem;
+    
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .box {
+    height: 25vw !important;
+    width: 25vw !important;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .cont {
+    grid-template-columns: 1fr !important;
+  }
+  .box {
+    height: 40vw !important;
+    width: 40vw !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .cont {
+    grid-template-columns: 1fr !important;
+  }
+  .box {
+    height: 80vw !important;
+    width: 80vw !important;
+  }
+  .box:hover {
+    transform: none;
+  }
+  .pop {
+    width: 100%;
+  }
+  .blur {
+    display: none !important;
+  }
+}

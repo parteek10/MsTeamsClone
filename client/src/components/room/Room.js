@@ -272,7 +272,6 @@ const Room = (props) => {
         socket.on("receiveMessage", (data) => {
           if (!(state.left || state.right || state.bottom || state.top)) {
             sound.play();
-            console.log(data);
             const msguser = data.message.user;
             const username = msguser.fname + " " + msguser.lname;
             // if(msguser._id!=user._id)
@@ -286,11 +285,9 @@ const Room = (props) => {
 
         socket.on("user left", (user) => {
           sound.play();
-          console.log(user);
           const peerObj = peersRef.current.find(
             (p) => p.peerID === user.socketId
           );
-          console.log(peerObj);
           if (peerObj) {
             peerObj.peer.destroy();
           }

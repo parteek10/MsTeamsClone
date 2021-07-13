@@ -73,13 +73,13 @@ export default function Signin() {
 
         try {
             const res = await axios.post(`/user/signin`, userpost);
-            console.log(res);
             if (res.data.isMatch === false) {
                 window.alert(res);
+                console.log(res);
                 return;
             }
             else {
-                console.log(res.data);
+                console.log(res.data.user.fname + " signned in successfully !!");
                 window.alert(res.data.user.fname + " logged in successfully !!");
             }
 

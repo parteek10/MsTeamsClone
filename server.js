@@ -54,7 +54,6 @@ io.on("connection", (socket) => {
 	});
 
 	socket.on("join room", ({ roomID, user }) => {
-		console.log(roomID, user);
 
 		joinMeetbyId(socket, roomID, user);
 

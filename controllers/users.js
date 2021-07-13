@@ -8,7 +8,6 @@ exports.logoutUser = async (req, res) => {
   try {
     req.user.tokens = req.user.tokens.filter((token) => {
       return jwt.verify(token.token, process.env.SECRET_KEY,(err,data)=>{
-        console.log(data);
         if(!err&&token.token!=req.token)
         {
           return true;

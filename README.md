@@ -72,6 +72,11 @@ This is a video calling web application where users can call other user and will
   
 ### Chat 
    <img src = "./images/chatWindow.PNG" >
+   
+   
+   
+## Note : 
+   There is an error called "invalid frame header" on console of application , but it is not creating any issue in its functioning !!
 
 
 

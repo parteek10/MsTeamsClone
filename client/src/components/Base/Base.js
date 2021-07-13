@@ -20,8 +20,8 @@ const Base = ({
 
 		try {
 			const res = await axios.get(`/user/verify`, config);
-			if (res)
-				console.log(res);
+			// if (res)
+			// 	console.log(res);
 		} catch (error) {
 			console.log(error);
 			window.alert("Session expired SignIn again");

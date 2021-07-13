@@ -20,15 +20,13 @@ import clsx from "clsx";
 import { useSnackbar } from "react-simple-snackbar";
 import "./Room.css";
 import Messages from "./chat/Messages/Messages";
-import InfoBar from "./chat/InfoBar/InfoBar";
 import Input from "./chat/Input/Input";
 import Video, { StyledDiv, Styledpara, StyledVideo } from "./Video";
 import { addPeer, createPeer, snackBaroptions, uniquePeers } from "./utils";
 import UIFx from "uifx";
 import onlineIcon from "./icons/onlineIcon.png";
 import CancelIcon from "@material-ui/icons/Cancel";
-import { Divider } from "@material-ui/core";
-import { Typography } from "@material-ui/core";
+
 
 export const socket = io("https://vc-app93.herokuapp.com");
 // export const socket = io("http://localhost:8000");
@@ -210,7 +208,7 @@ const Room = (props) => {
         socket.on(
           "user-connected",
           ({ user, usersInThisRoom, chatInThisRoom }) => {
-            console.log(`${user.fname} joined room ${roomID}`);
+            console.log(`${user.fname} joined room `);
             openSnackbar(`${user.fname} joined room`);
           }
         );
@@ -226,7 +224,7 @@ const Room = (props) => {
           const chats = data.chatInThisRoom;
           setMessages(chats);
           sound.play();
-          console.log(users);
+          console.log("users in this room", users);
           const peers = [];
           users.forEach((user) => {
             const peer = createPeer(user.socketId, socket.id, stream);
@@ -250,7 +248,7 @@ const Room = (props) => {
 
         socket.on("user joined", (payload) => {
           sound.play();
-          console.log("user joined", payload);
+          console.log(`${payload.user.fname} joined `);
           const peer = addPeer(payload.signal, payload.callerID, stream);
           peersRef.current.push({
             peerID: payload.callerID,
@@ -285,6 +283,9 @@ const Room = (props) => {
 
         socket.on("user left", (user) => {
           sound.play();
+          openSnackbar(`${user.fname} left the meeting`);
+          console.log(`${user.fname} left the meeting`);
+
           const peerObj = peersRef.current.find(
             (p) => p.peerID === user.socketId
           );

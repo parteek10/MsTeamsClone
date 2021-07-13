@@ -23,6 +23,8 @@ This is a video calling web application where users can call other user and will
 - NodeJs
 - MongoDb
 - React 
+- Express
+- WebRtc
 - Socket-io
 
 ## Modules and Libraries 
@@ -35,7 +37,7 @@ This is a video calling web application where users can call other user and will
 
 ## How to start
 1. Open the web application [Vc-app](https://vc-app93.herokuapp.com/)
-2. Sign in using your account , if you don't have any account sign up first  (demo account : shaan@gmail.com  , pwd : shaan ) 
+2. Sign in using your account , if you don't have any account sign up first  (demo account : shaan@gmail.com  , pswd : shaan ) 
 3. Create a new room 
 4. Send roomId of the room from URL to your friend 
 5. Ask your friend to join the room using that roomId 
@@ -44,12 +46,14 @@ This is a video calling web application where users can call other user and will
 > Feel free to give your feedback on Email : parteekjain90340@gmail.com
 
 ## How to run locally 
-1. Clone this repository 
-2. move to root folder `cd TeamsClone`
-3. run command `npm install` , make ensure nodeJs is already installed 
+1. Clone this repository `git clone https://github.com/parteek10/MsTeamsClone.git`
+2. Move to root directory `cd MsTeamsClone`
+3. run command `npm install` , make sure nodeJs is already installed 
 4. wait until step 3 completes
 5. change directory to client `cd client`
 6. run command `npm install`
+7. change socket path in room.js file (line num : 34 ) 
+8. change port number of peer in room/utils/index.js file (line num : 29 and 51 )
 
 
 ## Application ScreenShots 
